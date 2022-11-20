@@ -1,0 +1,111 @@
+.home{
+    display: flex;
+    height: 90vh;
+    padding-bottom: 10%;
+}
+.right{
+    width:60%;
+    height:85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 0 2rem;
+    padding-right: 15%;
+    padding-left: 10%;
+}
+.heading{
+    font-weight: 600;
+    font-size: 2.5rem;
+  
+}
+.qoute{
+    color:rgba(0,0,0,0.5);
+    font-size: 1rem;
+    font-weight: 500;
+    
+}
+.sub{
+    margin-top: 1.2rem;
+font-size: 0.8rem;
+  color:rgba(0,0,0,0.8);
+}
+.button{
+    margin-top: 2rem;
+}
+.left{
+    color:yellow;
+    width:40%;
+   position: relative;
+    height:88vh
+}
+.bloodimg{
+    margin-top: 10%;
+    position: relative;
+    z-index: 50;
+    width:500px;
+    height:500px
+
+}
+.circle{
+    position: absolute;
+ top:20%;
+    z-index: -9;
+    width:90%;
+    height:450px;
+    border-radius: 15px;
+    border-top-left-radius: 300px;
+    backdrop-filter: blur(130px);
+    background:linear-gradient(30deg,#6190FF ,#6190FF, #6190FF, #0E20FF  );
+}
+
+.card{
+width: 400px;
+height:75px;
+background-color: rgba(26, 26, 184, 0.2);
+display: flex;
+    align-items: center;
+backdrop-filter: blur(50px);
+position: absolute;
+top:63%;
+border-radius: 30px;
+padding-left: 15px;
+transform: translateX(-50%);
+}
+.card1{
+    width: 400px;
+    height:75px;
+    background-color: rgba(150, 95, 25, 0.2);
+    display: flex;
+    align-items: center;
+    backdrop-filter: blur(50px);
+    position: absolute;
+    top:80%;
+    border-radius: 30px;
+    padding-left: 15px;
+    transform: translateX(-50%);
+    }
+.card2{
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    width: 400px;
+    height:75px;
+    position: absolute;
+    top:43%;
+    transform: translateX(-50%);
+    background-color: white;
+      border-radius: 30px;
+    box-shadow: 1px -2px 42px 2px rgba(0,0,0,0.25);
+}
+.cardqoute{
+    width: 170px;
+    
+    font-size: 11px;
+    color: rgba(0,0,0,0.9);
+}
+.icon{
+    width: 50px;
+    height: 50px;
+}
+/* "https://img.icons8.com/bubbles/100/null/erythrocytes.png */
