@@ -15,7 +15,7 @@ console.log("profile",userdata)
 <div className={styles.profilesec}>
 <div className={styles.left}>
 <img className={styles.avatar} src="https://img.icons8.com/fluency/240/null/user-male-circle.png"/>
-<div className={styles.name}>{`Anantharaj`}</div>
+<div className={styles.name}>{userdata.userdata.name}</div>
 
 </div>
 <div   className={styles.right}>

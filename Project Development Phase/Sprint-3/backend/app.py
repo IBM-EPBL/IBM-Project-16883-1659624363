@@ -18,8 +18,8 @@ def register():
     # if(password!=cpassword):
 
     #     return Response("{'message':'Password and confirm password are not same'}", status=422, mimetype='application/json')
-       
-    db.register(name, email, password)
+    phonenumber=data['phonenumber']   
+    db.register(name, email, password,phonenumber)
     user={
         'name':data['name'],
         'email':data['email']
@@ -64,7 +64,8 @@ def adduserdetails():
     role = "donor"
     donorstatus="pending"
     bloodgroup=data['bloodgroup']
-    res=db.adduserDetails(address, city, state, role,bloodgroup,donorstatus,email)
+    age=data['age']
+    res=db.adduserDetails(address, city, state, role,bloodgroup,donorstatus,email,age)
     return res
 
 # get current user

@@ -3,6 +3,7 @@ import styles from "./css/DonarLogin.module.css"
 import { NavLink, useNavigate } from "react-router-dom";
 import { useReducer ,useContext} from "react";
 import { AuthContext } from "../context/authContext";
+import image from "./assets/donorlogin.jpg"
 import axios from "axios";
 const DonarLogin=()=>{
 
@@ -54,9 +55,9 @@ catch(err){
 
 return(
     <div className={styles.donatesec}>
-        donarLogin
+    
         <div className={styles.left}>
-
+<div><img src={image} className={styles.img}></img></div>
         </div>
         <div className={styles.right}>
 <form className={styles.form} autoComplete="on">

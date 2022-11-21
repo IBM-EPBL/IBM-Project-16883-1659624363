@@ -42,7 +42,7 @@ return(
 //<div onClick={logout}>logout</div>
 }
 {
-    userdata.islogedin&&<div onClick={logout}>logout</div>
+    userdata.islogedin&&<div onClick={logout} className={styles.logout}>logout</div>
 }
 </div>
 

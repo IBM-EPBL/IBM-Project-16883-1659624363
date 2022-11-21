@@ -4,6 +4,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { useContext, useReducer } from "react";
 import { AuthContext } from "../context/authContext";
 import axios from "axios";
+import image from "./assets/signup.jpg"
 const SignUp=()=>{
  
    const userdata=useContext(AuthContext)
@@ -30,9 +31,12 @@ const SignUp=()=>{
       }
 
 const clickHandler=async()=>{
+
+
+
   try
 {
-  const res=await axios.post('http://127.0.0.1:5000/login',{
+  const res=await axios.post('http://127.0.0.1:5000/register',{
       name:formdata.name,
       email:formdata.email,
       password:formdata.password,
@@ -57,9 +61,9 @@ catch (err){
 
 return(
     <div className={styles.donatesec}>
-        SignUp
+        
         <div className={styles.left}>
-
+        <div><img src={image} className={styles.img}></img></div>
         </div>
         <div className={styles.right}>
 <form className={styles.form}>

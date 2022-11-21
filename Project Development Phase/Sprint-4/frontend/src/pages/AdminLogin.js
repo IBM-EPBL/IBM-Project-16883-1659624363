@@ -5,6 +5,7 @@ import { AuthContext } from "../context/authContext"
 import { useContext, useReducer } from "react"
 import fetchoption from '../helpers/fetchoption'
 import { useNavigate } from "react-router-dom"
+import image from "./assets/admin.jpg"
 import axios from "axios"
 const AdminLogin=()=>{
    const userdata=useContext(AuthContext);
@@ -62,9 +63,12 @@ const AdminLogin=()=>{
 
 return(
     <div className={styles.donatesec}>
-        AdminLogin
+        
         <div className={styles.left}>
 
+        <div className={styles.left}>
+<div><img src={image} className={styles.img}></img></div>
+        </div>
         </div>
         <div className={styles.right}>
 <form className={styles.form}>

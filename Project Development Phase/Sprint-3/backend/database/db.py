@@ -9,8 +9,8 @@ except:
     print("Connection failed")
 
 
-def register(name, email,  password):
-    func.register(name, email,  password, conn)
+def register(name, email,  password,phonenumber):
+    func.register(name, email,  password,phonenumber, conn)
 
 
 def login(email, password):
@@ -18,8 +18,8 @@ def login(email, password):
     return loginresult
 
 
-def adduserDetails(address, city, state, role, bloodgroup,donorstatus,email):
-    result=func.addUserDetailsfunc(address, city, state, role, bloodgroup, donorstatus, email , conn)
+def adduserDetails(address, city, state, role, bloodgroup,donorstatus,email,age):
+    result=func.addUserDetailsfunc(address, city, state, role, bloodgroup, donorstatus, email , age , conn)
     return result
 
 def getuser(email):

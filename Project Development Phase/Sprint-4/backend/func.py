@@ -3,13 +3,14 @@ from flask import Flask, request, jsonify, session , Response
 
 
 # register function
-def register(name, email, password, conn):
-    sql = "INSERT INTO PDAUSERS(name,email,password,role) VALUES (?, ?, ?,?)"
+def register(name, email, password, phonenumber , conn):
+    sql = "INSERT INTO PDAUSERS(name,email,password,role,phonenumber) VALUES (?, ?, ?,?, ?)"
     stmt = ibm_db.prepare(conn, sql)
     ibm_db.bind_param(stmt, 1, name)
     ibm_db.bind_param(stmt, 2, email)
     ibm_db.bind_param(stmt, 3, password)
     ibm_db.bind_param(stmt, 4, 'user')
+    ibm_db.bind_param(stmt, 5, phonenumber)
     ibm_db.execute(stmt)
 
 
@@ -47,7 +48,7 @@ def login(email, password, conn):
 # adding user details function
 
 
-def addUserDetailsfunc(address, city, state, role, bloodgroup, donorstatus, email,  conn):
+def addUserDetailsfunc(address, city, state, role, bloodgroup, donorstatus, email, age , conn):
     # sql = "INSERT INTO PDAUSERS(address, city, state) VALUES (?, ?, ?)"
 
     sql = "select * from pdausers where email=?"
@@ -63,7 +64,7 @@ def addUserDetailsfunc(address, city, state, role, bloodgroup, donorstatus, emai
 
 
 
-    sql = "UPDATE pdausers SET address = ?, city = ? , state = ? , role=? , bloodgroup=? , donorstatus=? WHERE email = ?"
+    sql = "UPDATE pdausers SET address = ?, city = ? , state = ? , role=? , bloodgroup=? , donorstatus=? , age=? WHERE email = ?"
     stmt = ibm_db.prepare(conn, sql)
     ibm_db.bind_param(stmt, 1, address)
     ibm_db.bind_param(stmt, 2, city)
@@ -71,8 +72,8 @@ def addUserDetailsfunc(address, city, state, role, bloodgroup, donorstatus, emai
     ibm_db.bind_param(stmt, 4, role)
     ibm_db.bind_param(stmt, 5, bloodgroup)
     ibm_db.bind_param(stmt, 6, donorstatus)
-    
-    ibm_db.bind_param(stmt, 7, email)
+    ibm_db.bind_param(stmt, 7, age)
+    ibm_db.bind_param(stmt, 8, email)
     ibm_db.execute(stmt)
     return jsonify({'message': "details added succesfully, Wait for the Admin Approval"})
 

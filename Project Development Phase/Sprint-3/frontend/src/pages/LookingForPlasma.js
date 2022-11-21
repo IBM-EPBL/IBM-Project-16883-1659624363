@@ -102,7 +102,7 @@ return(
 <option>B+</option>
 <option>AB+</option>
 <option>AB-</option>
-<option>O-</option>
+<option>O+</option>
 </select>
 </div>
 
@@ -132,7 +132,7 @@ return(
 <div className={styles.headingsec}>
 <div className={styles.heading}>S.No</div>
 <div className={styles.heading}>Donar Name</div>
-<div className={styles.heading}>Age</div>
+<div className={styles.heading}>Phone No.</div>
 <div className={styles.heading}>City</div>
 <div className={styles.heading}>Blood Group</div>
 </div>
@@ -143,7 +143,7 @@ return(
       <div className={styles.values}>
 <div className={styles.value}>{i+1}</div>
 <div className={styles.value}>{donor.NAME}</div>
-<div className={styles.value}>{donor.AGE||18}</div>
+<div className={styles.value}>{donor.PHONENUMBER}</div>
 <div className={styles.value}>{donor.CITY}</div>
 <div className={styles.value}>{donor.BLOODGROUP}</div>
 </div>

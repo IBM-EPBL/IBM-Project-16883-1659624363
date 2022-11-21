@@ -6,11 +6,11 @@ display: flex;
 overflow-x: hidden;
 }
 .left{
-    width:50vw
+    width:53vw
 
 }
 .right{
-    width:50vw;
+    width:47vw;
  
    display:flex;
    align-items: center;
@@ -22,7 +22,7 @@ overflow-x: hidden;
     background-color: rgba(0, 26, 255, 0.144);
     backdrop-filter: blur(20px);
     border-radius: 8px;
-    padding: 3rem 4rem;
+    padding: 1rem 4rem;
     position: relative;
     z-index: 99;
 
@@ -71,4 +71,8 @@ padding: 0 1rem;
 }.input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
+  }
+  .img{
+    width: 700px;
+    height: 550px;
   }
